@@ -1,6 +1,10 @@
 @charset "utf-8";
 
 /* 共通パーツ */
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #FFFEFC;
     color: #222;
@@ -244,6 +248,9 @@ body{
     transition: .3s;
 }
 
+.fixed_button .button::after{
+    content: unset;
+}
 
 
 /* フッター */

@@ -12,7 +12,7 @@ main{
 }
 
 /* 取扱業務 */
-.service{
+.page_title{
     margin-top: -29px;
 }
 
@@ -69,7 +69,7 @@ main{
     padding: 36px 0 50px 0;
 }
 
-.button{
+.sevice_button .button{
     display: block;
     width: 27px;
     height: 27px;
