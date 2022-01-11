@@ -1,0 +1,428 @@
+@charset "utf-8";
+
+/* MV */
+.mv{
+    height: 46vw;
+    background-image: url(../image/mv.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    position: relative;
+}
+
+.catchcopy{
+    position: absolute;
+    margin-top: 30vw;
+}
+
+.catchcopy h1{
+    display: table;
+    background-color: #fff;
+    font-family: 'YuMincho' ,serif;
+    font-size: 30px;
+    padding: 0.7em 0.7em 0.7em 0.7em;
+    margin-bottom: 17px;
+}
+
+
+/* 私達について */
+.about{
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section_title{
+    text-align: center;
+    font-family: 'YuMincho' ,serif;
+    font-size: 30px;
+    padding-bottom: 15px;
+    margin-top: 170px;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+.section_title::after{
+    content:"";
+    display:block;
+    width:50%;
+    height:1px;
+    background-color:#B4BE75;
+    position:absolute;
+    bottom: 0;
+    left: 25%;
+}
+
+.about .section_title{
+    margin-top: 190px;
+}
+
+.about_container{
+    display: flex;
+    justify-content:space-between;
+}
+
+.section_text{
+    font-size: 16px;
+    line-height: 2.5;
+}
+
+.about .section_text{
+    width: 51%;
+}
+
+.about_image{
+    width: 44%;
+    object-fit: cover;
+    object-position: 60% 50%;
+}
+
+
+/* 初めての方へ */
+.for_beginner{
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 170px;
+
+    height: 610px;
+    /* TODO: vwつかって書き換え */
+    background-image: url(../image/backcolor.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+}
+
+.for_beginner .section_title::after{
+    content: none;
+}
+
+.for_beginner .section_title{
+    margin-top: unset;
+    margin-bottom: unset;
+    padding: 95px 0 55px 0;
+}
+
+.for_beginner .section_text br{
+    display: block;
+    content: "";
+    /* height: 64px; */
+    height: 0.05vw;
+}
+
+.for_beginner .section_text{
+    width: 43%;
+    min-width: 600px;
+}
+
+
+/* 取扱内容 */
+.service{
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service_container{
+    width: 63%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.service_box{
+    display: flex;
+    width: 40%;
+    /* justify-content:space-between;で崩れるので（余白が固定）pxで指定するのがいいかも */
+    height: 134px;
+}
+
+.service_box:nth-child(n+3){
+    margin-top: 85px;
+}
+
+.service_icon{
+    margin-right: 26.5px;
+    height: 10vw;
+    min-height: 100px;
+}
+
+.service_title{
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid #C3CC8A;
+    padding-bottom: 10.5px;
+}
+
+.service_text{
+    font-size: 14px;
+    margin-top: 11px;
+}
+
+.section_button{
+    display: flex;
+    align-items: center;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 326px;
+    columns: #222;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #EFD2B3;
+    padding: 1.2em 0 ;
+    border-radius: 10px;
+    margin-top: 70px;
+
+    position: relative;
+}
+
+.button::after{
+    position: absolute;
+    content: "";
+    border-right: 4.5px solid transparent;
+    border-bottom: 7.79px solid #222;
+    border-left: 4.5px solid transparent; 
+    transform: rotate(90deg); 
+    left: 68%;
+}
+
+.button:hover{
+    opacity: 50%;
+    transition: .3s;
+}
+
+
+/* ご相談の流れ */
+.flow{
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flow_container{
+    width: 68%;
+    position: relative;
+}
+
+.flow_container::before{
+    content:"";
+    display:block;
+    width:1px;
+    height:80%;
+    background-color:#B4BE75;
+    position:absolute;
+    top:10%;
+    left: calc(10% + 30px);    
+}
+
+.flow_box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #F8F8F8;
+
+    min-height: 121px;
+    padding: 22px 0;
+    margin-bottom: 44px;
+}
+
+.flow_box:last-child{
+    margin-bottom: unset;
+}
+
+.flow_number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color:#B4BE75;
+    width: 61px;
+    height: 61px;
+    border-radius: 30px;
+    margin-left: 10%;
+
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 15;
+}
+
+.flow_textbox{
+    width: 65%;
+    margin: auto;
+}
+
+.flow_title{
+    font-size: 20px;
+    color: #B4BE75;
+    margin-bottom: 12px;
+    font-weight: 600;
+    /* letter-spacing: .05em; */
+}
+
+.flow_text{
+    font-size: 15px;
+    line-height: 1.5em;
+}
+
+
+/* 弁護士紹介 */
+.introduction{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.introduction_container{
+    width: 100%;
+    display: flex;
+    margin-top: 48.5px;
+}
+
+.introduction_box{
+    width: calc(25% - 15px);
+    margin-right: 15px;
+}
+
+.lawyer_image{
+    width: 100%;
+}
+
+.lawyer_name{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #F8F8F8;
+    height: 64px;
+}
+
+.name{
+    margin-left: 1em;
+}
+
+/* ブログ */
+.blog{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.blog_container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.blog_box{
+    display: flex;
+    width: 47%;
+}
+
+.blog_image{
+    width: 50%;
+    margin-right: 30px;
+}
+
+.blog_textbox{
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.post_date{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.blog_title{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.blog_text{
+    font-size: 14px;
+    padding: 17px 0;
+}
+
+.more_read{
+    display: flex;
+    align-items: center;
+    color: #E29D44;
+    font-size: 14px;
+    position: relative;
+}
+
+.more_read::after{
+    position: absolute;
+    content: "";
+    border-right: 4.5px solid transparent;
+    border-bottom: 7.79px solid #E29D44;
+    border-left: 4.5px solid transparent; 
+    transform: rotate(90deg);
+    left: 35%;
+
+}
+
+.blog_box:nth-child(n+3){
+    margin-top: 70px;
+}
+
+
+/* アクセス */
+.access{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+}
+
+.access_container{
+    display: flex;
+    width: 77%;
+}
+
+.access_map{
+    width: 57%;
+    aspect-ratio: 100/46;
+    margin-right: 8%;
+}
+
+.access_map iframe{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.access_textbox{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.access_textbox .adress{
+    font-size: 16px;
+    line-height: 2em;
+    margin-bottom: 30px;
+}
+
+.access_textbox .adress_text{
+    font-size: 16px;
+}
+
+.access .button::after{
+    left: 80%;
+}

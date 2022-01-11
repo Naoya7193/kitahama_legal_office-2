@@ -30,6 +30,8 @@
         <!-- ファビコン -->
     
         <!-- Webフォント -->
+        <link href="http://fonts.cdnfonts.com/css/din-alternate" rel="stylesheet">
+                
     
         <!-- アイコンフォント -->
     
@@ -43,7 +45,7 @@
 
     <!-- ヘッダー -->
     <header class="header">
-        <nav class="header_nav">
+        <nav class="header_nav wrapper_large">
             <div class="header_icon">キタハマ総合法律事務所</div>
 
             <ul class="header_list">
@@ -58,7 +60,7 @@
                 <img src="./image/tel.png" alt="電話のアイコン" class="tel_icon">
                 <div class="tel_box">
                     <p class="tel_number">0120-123-648</p>
-                    <p class="contactable_time">平日：<span>10:00～18:00</span>   土 日：要相談</p>
+                    <div class="contactable_time">平日：<span>10:00～18:00</span>   土 日：要相談</div>
                 </div>
             </div>
 
@@ -66,8 +68,7 @@
     </header>
 
     <!-- MV -->
-    <div class="mv">
-        <img src="./image/mv.png" alt="弁護士と相談者の画像" class="mv">
+    <div class="mv wrapper">
         <div class="catchcopy">
             <h1>あなたと同じ目線に立ち、</h1>
             <h1>寄り添う法律事務所。</h1>
@@ -79,18 +80,22 @@
     <section class="about">
         <h2 class="section_title">私たちについて</h2>
 
-        <p class="section_text">
-            キタハマ総合法律事務所のホームページをご覧頂きありがとうございます。当法律事務所は〇〇年に設立し、地域の方々に支えられて発展して参りました。
-            <br>私たちキタハマ総合法律事務所には幅広い世代の弁護士が在籍しており、皆様が最適な選択肢をとることができるよう誠意を持って対応致します。そのためお一人で悩んで解決できなければ、いつでもお気軽に安心してご相談にきてください。
-            <br>私たち法律の専門家と一緒に最善の解決策を見つけましょう。
-        </p>
+        <div class="about_container wrapper">
+            <p class="section_text">
+                キタハマ総合法律事務所のホームページをご覧頂きありがとうございます。
+                <br>当法律事務所は〇〇年に設立し、地域の方々に支えられて発展して参りました。
+                <br>私たちキタハマ総合法律事務所には幅広い世代の弁護士が在籍しており、皆様が最適な選択肢をとることができるよう誠意を持って対応致します。そのためお一人で悩んで解決できなければ、いつでもお気軽に安心してご相談にきてください。
+                <br>私たち法律の専門家と一緒に最善の解決策を見つけましょう。
+            </p>
+    
+            <img src="./image/about.jpg" alt="弁護士の画像" class="about_image">    
 
-        <img src="./image/about.jpg" alt="弁護士の画像" class="about_image">
+        </div>
 
     </section>
 
     <!-- 初めての方へ -->
-    <section class="for_beginners">
+    <section class="for_beginner wrapper">
         <h2 class="section_title">どんな些細なことでも、<br>一人で悩まずにお気軽にご相談ください。</h2>
 
         <p class="section_text">
@@ -109,7 +114,7 @@
         <div class="service_container">
 
             <div class="service_box">
-                <img src="./image/contents01.png" alt="離婚問題のアイコン">
+                <img src="./image/contents01.png" alt="離婚問題のアイコン" class="service_icon">
                 <div class="service_textbox">
                     <p class="service_title">離婚問題</p>
                     <p class="service_text">離婚問題についてご相談ください。</p>
@@ -117,7 +122,7 @@
             </div> 
 
             <div class="service_box">
-                <img src="./image/contents02.png" alt="相続問題のアイコン">
+                <img src="./image/contents02.png" alt="相続問題のアイコン" class="service_icon">
                 <div class="service_textbox">
                     <p class="service_title">相続問題</p>
                     <p class="service_text">相続問題についてご相談ください。</p>
@@ -125,7 +130,7 @@
             </div> 
 
             <div class="service_box">
-                <img src="./image/contents03.png" alt="交通事故問題のアイコン">
+                <img src="./image/contents03.png" alt="交通事故問題のアイコン" class="service_icon">
                 <div class="service_textbox">
                     <p class="service_title">交通事故問題</p>
                     <p class="service_text">交通事故問題についてご相談ください。</p>
@@ -133,7 +138,7 @@
             </div> 
 
             <div class="service_box">
-                <img src="./image/contents01.png" alt="債務整理のアイコン">
+                <img src="./image/contents01.png" alt="債務整理のアイコン" class="service_icon">
                 <div class="service_textbox">
                     <p class="service_title">債務整理</p>
                     <p class="service_text">債務整理についてご相談ください。</p>
@@ -149,7 +154,6 @@
     </section>
 
     <!-- ご相談の流れ -->
-    <!-- TODO : flow_numberのz-indexを最高値 次点で擬似要素のborder 最後にbox全体 / flow_numberと擬似要素のrightの値を同じにする-->
     <section class="flow">
         <h2 class="section_title">ご相談の流れ</h2>
 
@@ -204,7 +208,7 @@
     </section>
 
     <!-- 弁護士紹介 -->
-    <section class="introduction">
+    <section class="introduction wrapper">
         <h2 class="section_title">弁護士紹介</h2>
 
         <p class="section_text">
@@ -251,7 +255,7 @@
     </section>
 
     <!-- ブログ -->
-    <section class="blog">
+    <section class="blog wrapper_small">
         <h2 class="section_title">ブログ</h2>
 
         <div class="blog_container">
@@ -259,8 +263,8 @@
             <div class="blog_box">
                 <img src="./image/blog01.jpeg" alt="ブログのサムネイル01" class="blog_image">
                 <div class="blog_textbox">
-                    <p class="post_bate">2021.12.23</p>
-                    <p class="blog_title">タイトルタイトル</p>
+                    <p class="post_date">2021.12.23</p>
+                    <p class="blog_title">新年明けましておめでとうございます。</p>
                     <p class="blog_text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                     <a href="" class="more_read">記事を読む</a>
                 </div>
@@ -269,18 +273,19 @@
             <div class="blog_box">
                 <img src="./image/blog02.jpeg" alt="ブログのサムネイル02" class="blog_image">
                 <div class="blog_textbox">
-                    <p class="post_bate">2021.12.10</p>
-                    <p class="blog_title">タイトルタイトル</p>
+                    <p class="post_date">2021.12.10</p>
+                    <p class="blog_title">弁護士に依頼をする５つのメリット</p>
                     <p class="blog_text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                     <a href="" class="more_read">記事を読む</a>
                 </div>
             </div>
 
             <div class="blog_box">
+                <!-- TODO: ここのイメージを差し替えること -->
                 <img src="./image/blog03.jpeg" alt="ブログのサムネイル03" class="blog_image">
                 <div class="blog_textbox">
-                    <p class="post_bate">2021.12.01</p>
-                    <p class="blog_title">タイトルタイトル</p>
+                    <p class="post_date">2021.12.01</p>
+                    <p class="blog_title">コロナウイルス感染拡大で急増する離婚</p>
                     <p class="blog_text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                     <a href="" class="more_read">記事を読む</a>
                 </div>
@@ -289,8 +294,8 @@
             <div class="blog_box">
                 <img src="./image/blog04.jpeg" alt="ブログのサムネイル04" class="blog_image">
                 <div class="blog_textbox">
-                    <p class="post_bate">2021.11.23</p>
-                    <p class="blog_title">タイトルタイトル</p>
+                    <p class="post_date">2021.11.23</p>
+                    <p class="blog_title">収入がなくなって借金が返せない？解決方法を弁護士が解説</p>
                     <p class="blog_text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                     <a href="" class="more_read">記事を読む</a>
                 </div>
@@ -305,18 +310,23 @@
     </section>
 
     <!-- お問い合わせ -->
-    <div class="contact">
+    <div class="contact wrapper">
         <p class="contact_copy">まずはお気軽にご相談下さい。</p>
         <p class="contact_price">ご相談料金：￥5500(税込) / 30分</p>
 
         <div class="contact_buttonbox">
 
             <div class="tel_button">
-                <img src="./image/tel.png" alt="電話のアイコン" class="tel_icon">
-                <div class="tel_box">
-                    <p class="tel_number">0120-123-648</p>
-                    <p class="contactable_time">平日：<span>10:00～18:00</span>   土 日：要相談</p>
+
+                <div class="tel_button_inner">
+                    <div class="tel_icons"></div>
+                    <div class="tel_box">
+                        <p class="tel_number">0120-123-648</p>
+                        <p class="contactable_time">平日：<span>10:00～18:00</span>   土 日：要相談</p>
+                    </div>
+
                 </div>
+
             </div>
 
             <div class="form_button">
@@ -331,35 +341,44 @@
     <section class="access">
         <h2 class="section_title">アクセス</h2>
 
-        <div class="access_map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1178.3253420042952!2d135.49639747704802!3d34.67418322259965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e74d5f549d2f%3A0x55387a4850878072!2z44Kv44Oq44Ko44Kk44K_44O844K644O744OV44Kh44Kv44OI44Oq44O8!5e0!3m2!1sja!2sjp!4v1636247728221!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
+        <div class="access_container">
 
-        <div class="access_textbox">
-            <p class="adress">〒541-0041
-                <br>大阪市中央区北浜1丁目1-1-12F
-            </p>
+            <div class="access_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1178.3253420042952!2d135.49639747704802!3d34.67418322259965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e74d5f549d2f%3A0x55387a4850878072!2z44Kv44Oq44Ko44Kk44K_44O844K644O744OV44Kh44Kv44OI44Oq44O8!5e0!3m2!1sja!2sjp!4v1636247728221!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+    
+            <div class="access_textbox">
+                <div class="access_textbox_inner">
 
-            <p class="access_text">堺筋線北浜駅から徒歩5分</p>
+                    <p class="adress">〒541-0041
+                        <br>大阪市中央区北浜1丁目1-1-12F
+                    </p>
+        
+                    <p class="access_text">堺筋線北浜駅から徒歩5分</p>
 
-            <div class="section_button">
-                <a href="" class="button">Google mapを開く</a>
+                </div>
+                
+                <div class="section_button">
+                    <a href="" class="button">Google mapを開く</a>
+                </div>
+    
             </div>
 
         </div>
+
     </section>
 
     <!-- フッター -->
     <footer class="footer">
-        <div class="footer_container">
+        <div class="footer_container wrapper">
 
             <div class="footer_box">
                 <p class="office">キタハマ総合法律事務所</p>
-                <p class="tel_number">0120-123-648</p>
                 <p class="address">
                     〒541-0041
                     <br>大阪市中央区北浜1丁目1-1-12F
                 </p>
+                <p class="tel_number">0120-123-648</p>
 
             </div>
 
@@ -380,10 +399,9 @@
 
     </footer>
 
-    <!-- トップに戻るボタン -->
+    <!-- 固定ボタン -->
     <div class="fixed_button">
-        <img src="./image/mail.png" alt="メールのアイコン" class="mail_icon">
-        <a href="" class="button">お問い合わせ</a>
+        <a href="" class="button">　お問い合わせ</a>
     </div>
 
 

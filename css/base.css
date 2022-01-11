@@ -1,0 +1,311 @@
+@charset "utf-8";
+
+/* 共通パーツ */
+body{
+    background-color: #FFFEFC;
+    color: #222;
+    font-family: "Hiragino Kaku Gothic ProN","ヒラギノ角ゴシック","Yu Gothic",sans-serif;
+    font-weight: 300;
+}
+
+
+/* 共通クラス */
+.wrapper_large{
+    width: 86%;
+    margin: auto;
+}
+
+.wrapper{
+    width: 80%;
+    margin: auto;
+}
+
+.wrapper_small{
+    width: 76%;
+    margin: auto;
+}
+
+
+/* ヘッダー */
+.header{
+    width: 100%;
+    height: 107px;
+}
+
+.header_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header_list a{
+    padding: 10px 0;
+    margin-left: 2em;
+    position: relative;
+}
+
+.header_list a::after{
+    content:"";
+    display:block;
+    width:100%;
+    height:1px;
+    background-color:#B4BE75;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+
+    transition: 0.5s;
+    transform: scaleX(0);
+    transform-origin:top left;
+}
+
+.header_list a:hover::after{
+    transform: scaleX(1);
+    /* TODO: いつか左から右に流れるアニメーションに変更する */
+}
+
+
+.header_icon{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header_list{
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header_contact{
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.tel_icon{
+    height: 100%;
+    margin-right: 12px;
+}
+
+.tel_number{
+    color: #E29D44;
+    font-family: 'DIN Alternate', sans-serif;
+    font-size: 32px;
+    letter-spacing: .1em;
+}
+
+.contactable_time{
+    font-size: 14px;
+}
+
+.contactable_time span{
+    font-family: 'DIN Alternate', sans-serif;
+    font-size: 14px;
+}
+
+
+/* お問い合わせ */
+
+/* コンテンツの高さを指定しない → 外枠のpaddingで調節する */
+.contact{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    background-color: #E8ECD1;
+    margin-top: 170px;
+    height: 506px;
+}
+
+.contact_copy{
+    font-family: 'YuMincho' ,serif;
+    font-size: 36px;
+    margin-top: 96px;
+    margin-bottom: 32px;
+}
+
+.contact_price{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 74px;
+    letter-spacing: .08em;
+}
+
+.contact_buttonbox{
+    display: flex;
+    width: 87.5%;
+    justify-content: space-between;
+}
+
+.tel_button_inner {
+    display: flex;
+    /* TODO: align-items: stretch;について詳しく調べる */
+    align-items: stretch;
+}
+
+.tel_icons {
+    /* TODO: widthは書き直すこと */
+    width: 133px;
+    background-image: url(../image/tel.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.tel_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #DD7E1B;
+    border-radius: 10px;
+    width: 48.5%;
+    padding: 30px 0;
+    /* height: 126px; */
+}
+
+.tel_button .tel_number{
+    /* margin-bottom: 12px; */
+}
+
+.form_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 48.5%;
+    /* height: 126px; */
+    border-radius: 10px;
+}
+
+.contact_link{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.form_button::after{
+    position: absolute;
+    content: "";
+    border-right: 4.5px solid transparent;
+    border-bottom: 7.79px solid #222;
+    border-left: 4.5px solid transparent; 
+    transform: rotate(90deg); 
+    left: 77%;
+}
+
+.form_button:hover{
+    background-color: #E29D44;
+    color: #fff;
+    transition: .25s;
+}
+
+.form_button:hover::after{
+    border-bottom: 7.79px solid #fff;
+    transition: .25s;
+}
+
+
+
+/* 固定ボタン */
+.fixed_button .button{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    bottom: 98px;
+    background-color: #E29D44;
+    color: #fff;
+    writing-mode: vertical-rl;
+    width: 69px;
+    height: 295px;
+    border-radius: 10px 0 0 10px;
+    letter-spacing: .5em;
+    font-size: 18px;
+    border: #FFFEFC solid 1.5px;
+    border-right: unset;
+}
+
+.fixed_button .button::before{
+    position:absolute;
+    content: url(../image/mail.png);
+    top: 36px;
+}
+
+
+.fixed_button .button:hover{
+    background-color: #B4BE75;
+    opacity: unset;
+    transition: .3s;
+}
+
+.fixed_button .button::after{
+    content: none;
+}
+
+
+
+/* フッター */
+.footer{
+    background-color: #BF8336;
+    color: #fff;
+    /* height: 344px; */
+    margin-top: 170px;
+    position: relative;
+}
+
+.footer_container{
+    display: flex;
+    justify-content:space-between;
+    padding: 60px 0 66px 0;
+}
+
+.footer_box .office{
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.footer_box .tel_number{
+    font-size: 21px;
+    color: #fff;
+    font-weight:unset;
+    letter-spacing: unset;
+}
+
+.footer_box .address{
+    font-size: 21px;
+    line-height: 1.5em;
+    color: #fff;
+    font-weight:unset;
+    padding: 25px 0;
+}
+
+
+.footer .tel_number{
+    font-family:  "Hiragino Kaku Gothic ProN","ヒラギノ角ゴシック","Yu Gothic",sans-serif;
+}
+
+.footer_nav a:hover{
+    opacity: 50%;
+}
+
+.footer_list{
+    font-size: 18px;
+
+    display: flex;
+}
+
+.footer_list a{
+    margin-right: 2.5em;
+}
+
+.copylight{
+    font-size: 14px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    margin-bottom: 27px;
+    bottom: 0;
+}
