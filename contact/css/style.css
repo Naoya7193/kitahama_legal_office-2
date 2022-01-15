@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/* 共通パーツ */
+main{
+    font-size: 16px;
+}
+
+
+/* 下層イメージ */
+.main_image{
+    width: 100%;
+}
+
+/* お問い合わせ */
+.page_title{
+    margin-top: -29px;
+}
+
+
+.page_maintitle{
+    display:inline-block;
+    font-family: 'YuMincho' ,serif;
+    font-size: 39px;
+    padding-bottom: 22px;
+
+    position: relative;
+}
+
+.page_maintitle::after{
+    content:"";
+    display:block;
+    width:66%;
+    left: 17%;
+    height:1px;
+    background-color:#B4BE75;
+    position:absolute;
+    bottom: 0;
+}
+
+.page_maintext{
+    display: flex;
+    justify-content: center;
+    margin-top: 112px;
+    margin-bottom: 80px;
+    line-height: 1.8em;
+}
+
+/* お問い合わせフォーム */
+.contact_formbox{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact_form{
+    width: 100%;
+}
+
+.form_parts{
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.contact_formbox .tel_number{
+    color: unset;
+    font-family: unset;
+    font-size: unset;
+    letter-spacing: unset;
+}
+
+label {
+    display: block;
+    position: relative;
+    margin-bottom: 26px;
+}
+
+.required label::after{
+    position: absolute;
+    content: "*";
+    top: 0;
+    margin-left: 5px;
+    color: #DD7E1B;
+}
+
+input[type="text"], input[type="email"], input[type="tel"],select,textarea{
+    padding: 23px 0 23px 24px;
+    background-color: #F8F8F8;
+    width: 100%;
+}
+
+input[type="tel"]{
+    width: 50%;
+}
+
+input[type="text"]::placeholder input[type="email"]::placeholder input[type="tel"]::placeholder{
+    color: #BEBBBB;
+}
+
+textarea{
+    height: 428px;
+}
+
+.select_icon{
+    position: relative;
+    width: 50%;
+}
+
+.select_icon::after{
+    position: absolute;
+    content: "";
+    border: 2px solid #222;
+    border-top: 0;
+    border-left: 0;
+    width: 10px;
+    height: 10px;
+    top: 28px;
+    right: 20px;
+    transform:rotate(45deg);
+}
+
+.form_submit{
+    display: flex;
+    justify-content: center;
+}
+
+.form_submit button{
+    padding: 23px 83px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #EFD2B3;
+    border-radius: 10px;
+}
+
+.form_submit button:hover{
+    opacity: 50%;
+    transform: .3s;
+}

@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+/* 共通パーツ */
+main{
+    font-size: 16px;
+}
+
+
+/* 下層イメージ */
+.main_image{
+    width: 100%;
+}
+
+/* よくある質問見出し */
+.page_title{
+    margin-top: -29px;
+}
+
+
+.page_maintitle{
+    display:inline-block;
+    font-family: 'YuMincho' ,serif;
+    font-size: 39px;
+    padding-bottom: 22px;
+
+    position: relative;
+}
+
+.page_maintitle::after{
+    content:"";
+    display:block;
+    width:66%;
+    left: 17%;
+    height:1px;
+    background-color:#B4BE75;
+    position:absolute;
+    bottom: 0;
+}
+
+
+/* よくある質問 */
+.faq {
+    margin-top: 87px;
+    /* padding-bottom: 40px; */
+}
+
+.faq_inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+summary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.plus_icon{
+    position: relative;
+    height: 100%;
+    margin-right: 31px;
+}
+
+.plus_icon::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    width:21px;
+    height: 2px;
+
+    background-color: #B6BE7E;
+}
+
+.plus_icon::after{
+    position: absolute;
+    content: "";
+    right: 0;
+    width:21px;
+    height: 2px;
+
+    background-color:#B6BE7E;
+    transform:rotate(90deg);
+}
+
+.plus_icon:hover:after{
+    transform: rotate(0deg);
+    transition: .5s;
+
+}
+
+.tab_item {
+    width: calc(25% - 13px);
+    margin-right: 13px;
+
+    height: 72px;
+    background-color: #BEBBBB;
+    /* line-height: 50px; */
+    font-weight: 600;
+    border-radius: 10px 10px 0 0;
+
+
+    text-align: center;
+    color: #fff;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+
+.tab_item:hover {
+    opacity: 0.75;
+    transition: .3s;
+}
+
+input[name="tab_item"] {
+    display: none;
+}
+
+.tab_content {
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+}
+
+.faq input:checked + .tab_item {
+    background-color: #B4BE75;
+    color: #fff;
+}
+
+#office:checked ~ #office_container,
+#consultation:checked ~ #consultation_container,
+#trial:checked ~ #trial_container,
+#price:checked ~ #price_container{
+    display: block;
+}
+
+.tab_content{
+    width: 100%;
+    background-color: #F8F8F8;
+    padding: 83px 0 75px 0;
+}
+
+.faq_box{
+    width: 90%;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.question{
+    display: flex;
+    align-items: center;
+    padding: 36px 0 36px 108px;
+    position: relative;
+    width: 90%;
+    line-height: 1.8em;
+}
+
+.question::before{
+    content: "Q";
+    position: absolute;
+    color: #B6BE7E;
+    font-size: 29px;
+    left: 50px;
+    font-weight: 600;
+}
+
+summary{
+    list-style: none;
+}
+
+.answer{
+    display: flex;
+    align-items: center;
+    padding: 34px 0 58px 108px;
+    position: relative;
+    width: 90%;
+    line-height: 1.8em;
+}
+
+.answer::before{
+    content: "A";
+    position: absolute;
+    color: #E29D44;
+    font-size: 29px;
+    left: 50px;
+    font-weight: 600;
+}

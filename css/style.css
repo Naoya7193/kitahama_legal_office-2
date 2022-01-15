@@ -47,12 +47,12 @@
 .section_title::after{
     content:"";
     display:block;
-    width:50%;
+    width:66%;
     height:1px;
     background-color:#B4BE75;
     position:absolute;
     bottom: 0;
-    left: 25%;
+    left: 17%;
 }
 
 .about .section_title{
@@ -374,7 +374,11 @@
     border-left: 4.5px solid transparent; 
     transform: rotate(90deg);
     left: 35%;
+}
 
+.more_read:hover{
+    opacity: 50%;
+    transition: .3s;
 }
 
 .blog_box:nth-child(n+3){

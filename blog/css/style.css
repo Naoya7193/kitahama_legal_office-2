@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/* 共通パーツ */
+main{
+    font-size: 16px;
+}
+
+
+/* 下層イメージ */
+.main_image{
+    width: 100%;
+}
+
+/* ブログ見出し */
+.page_title{
+    margin-top: -29px;
+}
+
+
+.page_maintitle{
+    display:inline-block;
+    font-family: 'YuMincho' ,serif;
+    font-size: 39px;
+    padding-bottom: 22px;
+
+    position: relative;
+}
+
+.page_maintitle::after{
+    content:"";
+    display:block;
+    width:66%;
+    left: 17%;
+    height:1px;
+    background-color:#B4BE75;
+    position:absolute;
+    bottom: 0;
+}
+
+/* ブログ */
+.blog_container{
+    margin-top: 111px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blog{
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin-bottom: 104px;
+}
+
+.blog_image{
+    width: 100%;
+}
+
+.post_date{
+    font-size: 14px;
+    padding: 16px 0;
+}
+
+.blog_title{
+    font-weight: 600;
+    line-height: 1.8em;
+    min-height: 63px;
+    /* height: 3em; */
+    /* text-align: start; */
+}
+
+.blog_text{
+    font-size: 14px;
+    padding-bottom: 16px;
+    line-height: 2em;
+}
+
+.more_read{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #E29D44;
+    position: relative;
+}
+
+.more_read::after{
+    position: absolute;
+    content: "";
+    border-right: 4.5px solid transparent;
+    border-bottom: 7.79px solid #E29D44;
+    border-left: 4.5px solid transparent; 
+    transform: rotate(90deg);
+    left: 25%;
+}
+
+.more_read:hover{
+    opacity: 50%;
+    transition: .3s;
+}
+
+.pagination_box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 12px;
+
+}
+
+.pagination ul{
+    display: inline-block;
+}
+
+.pagination li{
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.pagination li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#B4BE75;
+    float: left;
+    height: 36px;
+    width: 36px;
+    background-color: #fff;
+    border: 1.5px solid #B4BE75;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.pagination li a:hover{
+    color: #fff;
+    background-color: #B4BE75;
+    transition: .25s;
+}

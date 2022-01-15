@@ -41,12 +41,18 @@ body{
     align-items: center;
     height: 100%;
 
-    padding:  33px 0 30px 0;
+    padding:  32px 0 28px 0;
 }
 
 .header_list a{
-    padding: 10px 20px;
+    display: block;
+    padding: .5em 0;
     position: relative;
+}
+
+.header_list li{
+    margin: 0 1em;
+    white-space: nowrap;
 }
 
 .header_list a::after{
@@ -71,24 +77,28 @@ body{
 
 
 .header_icon{
-    font-size: 20px;
+    font-size: clamp(14px,1.6vw,20px);
     font-weight: 600;
 }
 
 .header_list{
     display: flex;
-    font-size: 18px;
+    font-size: clamp(12px,1.4vw,18px);
     font-weight: 600;
 }
 
 .header_contact{
     display: flex;
-    height: 50px;
     align-items: center;
 }
 
 .tel_icon{
-    height: 100%;
+    width: 40px;
+    height: 40px;
+    background-image: url(../image/tel.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     margin-right: 12px;
 }
 
@@ -145,15 +155,17 @@ body{
     display: flex;
     /* TODO: align-items: stretch;について詳しく調べる */
     align-items: stretch;
+    /* justify-content: center; */
 }
 
 .tel_icons {
     /* TODO: widthは書き直すこと */
-    width: 133px;
+    width: 80px;
     background-image: url(../image/tel.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    margin-right: 18px;
 }
 
 .tel_button{
@@ -164,7 +176,6 @@ body{
     border-radius: 10px;
     width: 48.5%;
     padding: 30px 0;
-    /* height: 126px; */
 }
 
 .tel_button .tel_number{
@@ -295,6 +306,7 @@ body{
 
 .footer_nav a:hover{
     opacity: 50%;
+    transition: .3s;
 }
 
 .footer_list{

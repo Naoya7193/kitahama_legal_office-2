@@ -29,12 +29,12 @@ main{
 .page_maintitle::after{
     content:"";
     display:block;
-    width:100%;
+    width:66%;
+    left: 17%;
     height:1px;
     background-color:#B4BE75;
     position:absolute;
     bottom: 0;
-    left: 0;
 }
 
 
@@ -99,6 +99,11 @@ main{
     display: flex;
     align-items: center;
     border-bottom: 1px solid #B4BE75;
+    padding-bottom: 2px;
+}
+
+.access_icon{
+    margin-right: 25px;
 }
 
 .access_title{
