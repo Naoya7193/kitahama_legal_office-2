@@ -1,5 +1,48 @@
 @charset "utf-8";
 
+
+/* フェイドイン画面 */
+.fadein_page{
+    background-color: #fff;
+    position: fixed;
+	top: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+}
+
+.fadein_page p {
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 35;
+}
+
+.fadein_maincopy{
+    top: 36%;
+    font-family: 'YuMincho' ,serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.fadein_page br{
+    display: block;
+    content: "";
+    height: 36px;
+}
+
+.fadein_subcopy{
+    bottom: 36%;
+    font-size: 20px;
+    font-weight: 600;
+    padding: .5em ;
+    border-bottom: 1px solid #B4BE75;
+}
+
+
+
 /* MV */
 .mv{
     height: 46vw;
@@ -119,7 +162,7 @@
 }
 
 
-/* 取扱内容 */
+/* 取扱業務 */
 .service{
     display: flex;
     width: 100%;

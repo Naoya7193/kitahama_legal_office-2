@@ -79,12 +79,21 @@ body{
 .header_icon{
     font-size: clamp(14px,1.6vw,20px);
     font-weight: 600;
+    white-space: nowrap;
+}
+
+.scroll_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .header_list{
     display: flex;
     font-size: clamp(12px,1.4vw,18px);
     font-weight: 600;
+    margin-left: 5%;
 }
 
 .header_contact{
@@ -105,18 +114,150 @@ body{
 .tel_number{
     color: #E29D44;
     font-family: 'DIN Alternate', sans-serif;
-    font-size: 32px;
+    font-size: clamp(20px,2.4vw,32px);
     letter-spacing: .1em;
 }
 
 .contactable_time{
     font-size: 14px;
+    font-size: clamp(10px,1vw,14px)
 }
 
 .contactable_time span{
     font-family: 'DIN Alternate', sans-serif;
     font-size: 14px;
 }
+
+
+/* ハンバーガーメニューとスクロールアニメーション */
+.scroll_on .scroll_wrapper{
+    width: 35%;
+    height: 100%;
+    flex-flow: column;
+
+    padding-top: 12%;
+    padding-bottom: 10%;
+}
+
+.scroll_button{
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 18px;
+    right: 30px;
+    z-index: 20;
+}
+
+.scroll_button::after{
+    content: url("../image/humberger.png");
+}
+
+.scroll_on .header_icon{
+    display: none;
+}
+
+.scroll_on .header_nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    opacity: .95;
+
+    position: fixed;
+    top: 0;
+    width: 50%;
+    right: -100%;
+    height: 100%;
+    z-index: 12;
+
+    transition: 1.2s;
+}
+
+
+.scroll_on .header_list a{
+    padding: unset;
+    font-size: 18px;
+    margin-bottom: 1.5em;
+}
+
+.scroll_on .header_list a::after{
+    bottom: -.1em;
+}
+
+.scroll_on .header_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: unset;
+}
+
+.scroll_on .scroll_button{
+    display: block;
+}
+
+.scroll_on .tel_number{
+    font-size: clamp(22px,2vw,27px);
+    white-space: nowrap;
+}
+
+.scroll_on .contactable_time{
+    font-size: clamp(10px,.8vw,12px);
+    white-space: nowrap;
+}
+
+/* スクロース専用お問い合わせボタン */
+
+.scroll_contact_button{
+    display: none;
+}
+
+.scroll_on .scroll_contact_button{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.scroll_on .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #E29D44;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 0;
+    min-width: 180px;
+    padding: 1.2em 0;
+    border-radius: 8px;
+
+    position: relative;
+}
+
+.scroll_on .button::before{
+    position: absolute;
+    transform: scale(.8) translateY(8%);
+    content: url(../image/mail.png);
+    left: 10%;
+    margin: auto 0;
+}
+
+.scroll_on .button::after{
+    content: none;
+}
+
+/* スクロース専用お問い合わせボタンここまで */
+
+
+
+.open .header_nav{
+    right: 0%;
+    transition: .6s;
+}
+
 
 
 /* お問い合わせ */
